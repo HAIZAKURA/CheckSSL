@@ -8,11 +8,11 @@ cat ./tmp/ca.info | grep 'issuer: ' >> ./tmp/${1}.info
 cat ./tmp/ca.info | grep 'SSL certificate verify' >> ./tmp/${1}.info
 cat ./tmp/ca.info | grep 'subject: ' >> ./tmp/${1}.info
 
-sed -i 's|\* \t start date: ||g' ./tmp/${1}.info
-sed -i 's|\* \t expire date: ||g' ./tmp/${1}.info
-sed -i 's|\* \t issuer: ||g' ./tmp/${1}.info
-sed -i 's|\* \t SSL certificate verify ||g' ./tmp/${1}.info
-sed -i 's|\* \t subject: ||g' ./tmp/${1}.info
+sed -i 's|\* [\t]* start date: ||g' ./tmp/${1}.info
+sed -i 's|\* [\t]* expire date: ||g' ./tmp/${1}.info
+sed -i 's|\* [\t]* issuer: ||g' ./tmp/${1}.info
+sed -i 's|\* [\t]* SSL certificate verify ||g' ./tmp/${1}.info
+sed -i 's|\* [\t]* subject: ||g' ./tmp/${1}.info
 
 start=$(sed -n '1p' ./tmp/${1}.info)
 expire=$(sed -n '2p' ./tmp/${1}.info)
@@ -23,7 +23,7 @@ subject=$(sed -n '5p' ./tmp/${1}.info)
 rm -f ./tmp/ca.info
 rm -f ./tmp/${1}.info
 
-DATE="$(echo $(date '+%Y-%m-%d %H:%M:%S'))"
+DATE="$(echo $(date '+%Y-%m-%d %H:%M:%S %Z'))"
 
 nowstamp="$(date -d "$DATE" +%s)"
 expirestamp="$(date -d "$expire" +%s)"
@@ -52,4 +52,7 @@ fi
 
 echo '"check": "'$DATE'",' >> ./tmp/${1}.json
 echo '"remain": "'$expireday'"' >> ./tmp/${1}.json
-echo '},' >> ./tmp/${1}.json
+echo '}' >> ./tmp/${1}.json
+
+cp -rf ./tmp/${1}.json ./results/${1}.json
+rm -rf ./tmp
