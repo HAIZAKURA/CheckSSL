@@ -1,4 +1,4 @@
-# SSL Checker
+# CheckSSL
 
 :lock:Check your site's SSL status.
 
@@ -8,7 +8,7 @@ I fixed some bugs and simplified it.
 
 [![Author](https://img.shields.io/badge/Author-Sukka-b68469?style=flat-square)](https://skk.moe)
 [![Modified](https://img.shields.io/badge/Modified-HAIZAKURA-blue?style=flat-square)](https://nya.run)
-[![License](https://img.shields.io/github/license/HAIZAKURA/SSL-Checker?style=flat-square)](./LICENSE)
+[![License](https://img.shields.io/github/license/HAIZAKURA/CheckSSL?style=flat-square)](./LICENSE)
 
 ## Demo
 
@@ -19,8 +19,8 @@ Wait for update.
 First clone this repo:
 
 ```bash
-$ git clone https://github.com/HAIZAKURA/SSL-Checker.git
-$ cd SSL-Checker
+$ git clone https://github.com/HAIZAKURA/CheckSSL.git
+$ cd CheckSSL
 ```
 
 Then give script permission to execute:
@@ -76,6 +76,6 @@ Here is an example of `nya.run.json`:
 
 ## Modified By
 
-**SSL-Checker** © [HAIZAKURA](https://nya.run), Released under the [MIT](./LICENSE) License.
+**CheckSSL** © [HAIZAKURA](https://nya.run), Released under the [MIT](./LICENSE) License.
 
 > [Personal Website](https://nya.run) · GitHub [@HAIZAKURA](https://github.com/HAIZAKURA) · Twitter [@haizakura_0v0](https://twitter.com/haizakura_0v0) · Telegram [@haizakura](https://t.me/haizakura)
