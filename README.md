@@ -12,7 +12,7 @@ I fixed some bugs and simplified it.
 
 ## Demo
 
-Wait for update.
+[https://ssl.lab.nya.run/](https://ssl.lab.nya.run/)
 
 ## Usage
 
